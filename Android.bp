@@ -49,7 +49,10 @@ cc_defaults {
 
 cc_binary {
     name: "sgdisk",
-    visibility: ["//device/qcom/qssi/vsdk_tools/host"],
+    visibility: [
+        "//device/qcom/qssi/vsdk_tools/host",
+        "//vendor:__subpackages__",
+    ],
     defaults: ["gptfdisk_default_flags"],
     host_supported: true,
 
