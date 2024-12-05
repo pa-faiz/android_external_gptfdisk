@@ -59,7 +59,11 @@ cc_binary {
 
     shared_libs: ["libext2_uuid"],
     static_libs: ["libgptf"],
-    visibility: ["//visibility:any_system_partition"],
+    visibility: [
+        "//visibility:any_system_partition",
+        "//device/qcom/qssi/vsdk_tools/host",
+        "//vendor:__subpackages__",
+    ],
 }
 
 lib_common_srcs = [
